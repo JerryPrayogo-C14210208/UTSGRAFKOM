@@ -391,7 +391,7 @@ public class Main {
                 18,
                 1
         ));
-        objects.get(1).getChildObject().get(0).translateObject(-0.13f, 0.15f, 0.9f);
+        objects.get(1).getChildObject().get(0).translateObject(-0.13f, 0.15f, 1.0f);
         objects.get(1).getChildObject().get(0).scaleObject(0.5f, 0.5f, 0.3f);
 
         objects.get(1).getChildObject().add(new Sphere(
@@ -409,7 +409,7 @@ public class Main {
                 18,
                 1
         ));
-        objects.get(1).getChildObject().get(1).translateObject(0.13f, 0.15f, 0.9f);
+        objects.get(1).getChildObject().get(1).translateObject(0.13f, 0.15f, 1.0f);
         objects.get(1).getChildObject().get(1).scaleObject(0.5f, 0.5f, 0.3f);
 
         //bola mata
@@ -428,7 +428,7 @@ public class Main {
                 18,
                 1
         ));
-        objects.get(1).getChildObject().get(2).translateObject(0.28f, 0.4f, 3f);
+        objects.get(1).getChildObject().get(2).translateObject(0.28f, 0.4f, 3.3f);
         objects.get(1).getChildObject().get(2).scaleObject(0.15f, 0.15f, 0.1f);
 
         objects.get(1).getChildObject().add(new Sphere(
@@ -446,7 +446,7 @@ public class Main {
                 18,
                 1
         ));
-        objects.get(1).getChildObject().get(3).translateObject(-0.28f, 0.4f, 3f);
+        objects.get(1).getChildObject().get(3).translateObject(-0.28f, 0.4f, 3.3f);
         objects.get(1).getChildObject().get(3).scaleObject(0.15f, 0.15f, 0.1f);
 
         //jambul
@@ -583,7 +583,7 @@ public class Main {
                 18,
                 5
         ));
-        objects.get(1).getChildObject().get(10).translateObject(0.36f, 0.1f, 2.7f);
+        objects.get(1).getChildObject().get(10).translateObject(0.36f, 0.1f, 3.0f);
         objects.get(1).getChildObject().get(10).scaleObject(0.4f, 1.6f, 0.15f);
         objects.get(1).getChildObject().get(10).rotateObject(45.3f, 0f, 0.0f, 0.8f);
 
@@ -602,7 +602,7 @@ public class Main {
                 18,
                 5
         ));
-        objects.get(1).getChildObject().get(11).translateObject(-0.36f, 0.1f, 2.7f);
+        objects.get(1).getChildObject().get(11).translateObject(-0.36f, 0.1f, 3.0f);
         objects.get(1).getChildObject().get(11).scaleObject(0.4f, 1.6f, 0.15f);
         objects.get(1).getChildObject().get(11).rotateObject(45.3f, 0f, 0.0f, -0.8f);
 

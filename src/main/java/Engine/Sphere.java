@@ -15,6 +15,7 @@ public class Sphere extends Circle{
     float radiusZ;
     int stackCount;
     int sectorCount;
+    int option;
 
     public Sphere(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, Vector4f color, List<Float> centerPoint, Float radiusX, Float radiusY, Float radiusZ,
                   int sectorCount,int stackCount, int option) {
@@ -22,6 +23,7 @@ public class Sphere extends Circle{
         this.radiusZ = radiusZ;
         this.stackCount = stackCount;
         this.sectorCount = sectorCount;
+        this.option = option;
         if (option==1){
             createSphere();
         } else if (option == 2) {
@@ -112,31 +114,44 @@ public class Sphere extends Circle{
         vertices.add(tempVertices.get(1));
         vertices.add(tempVertices.get(2));
         vertices.add(tempVertices.get(3));
-        //kotak yg sisi depan
+        vertices.add(tempVertices.get(0));
+        vertices.add(tempVertices.get(2));
+//        kotak yg sisi depan
+        vertices.add(tempVertices.get(6));
+        vertices.add(tempVertices.get(5));
+        vertices.add(tempVertices.get(2));
+        vertices.add(tempVertices.get(1));
+        vertices.add(tempVertices.get(5));
+        vertices.add(tempVertices.get(2));
+
+
+        vertices.add(tempVertices.get(7));
+        vertices.add(tempVertices.get(3));
+        vertices.add(tempVertices.get(2));
+        vertices.add(tempVertices.get(2));
+        vertices.add(tempVertices.get(6));
+        vertices.add(tempVertices.get(7));
+
+        vertices.add(tempVertices.get(7));
+        vertices.add(tempVertices.get(6));
         vertices.add(tempVertices.get(4));
         vertices.add(tempVertices.get(5));
         vertices.add(tempVertices.get(6));
-        vertices.add(tempVertices.get(7));
-        //kotak yg sisi kiri
+        vertices.add(tempVertices.get(4));
+
         vertices.add(tempVertices.get(0));
+        vertices.add(tempVertices.get(7));
         vertices.add(tempVertices.get(4));
         vertices.add(tempVertices.get(7));
         vertices.add(tempVertices.get(3));
-        //kotak yg sisi kanan
-        vertices.add(tempVertices.get(1));
-        vertices.add(tempVertices.get(5));
-        vertices.add(tempVertices.get(6));
-        vertices.add(tempVertices.get(2));
-        //kotak yg sisi atas
+        vertices.add(tempVertices.get(0));
+
         vertices.add(tempVertices.get(0));
         vertices.add(tempVertices.get(1));
-        vertices.add(tempVertices.get(5));
         vertices.add(tempVertices.get(4));
-        //kotak yg sisi bawah
-        vertices.add(tempVertices.get(3));
-        vertices.add(tempVertices.get(2));
-        vertices.add(tempVertices.get(7));
-        vertices.add(tempVertices.get(6));
+        vertices.add(tempVertices.get(4));
+        vertices.add(tempVertices.get(5));
+        vertices.add(tempVertices.get(1));
     }
     public void createSphere(){
         float pi = (float)Math.PI;
@@ -650,6 +665,33 @@ public class Sphere extends Circle{
                 temp_vector.x = centerPoint.get(2) + z;
                 vertices.add(temp_vector);
             }
+        }
+    }
+
+    public void draw(Camera camera, Projection projection){
+        drawSetup(camera, projection);
+        // Draw the vertices
+        //optional
+        glLineWidth(10); //ketebalan garis
+        glPointSize(10); //besar kecil vertex
+        //wajib
+        //GL_LINES
+        //GL_LINE_STRIP
+        //GL_LINE_LOOP
+        //GL_TRIANGLES
+        //GL_TRIANGLE_FAN
+        //GL_POINT
+        if(option == 3){
+            glDrawArrays(GL_TRIANGLES,
+                    0,
+                    vertices.size());
+        }else{
+            glDrawArrays(GL_POLYGON,
+                    0,
+                    vertices.size());
+        }
+        for(Object child:childObject){
+            child.draw(camera,projection);
         }
     }
 
