@@ -915,10 +915,10 @@ public class Main {
                 0.085f,
                 36,
                 18,
-                4
+                2
         ));
         objects.get(2).getChildObject().get(11).translateObject(0.0f, 0.051f, -0.1353f);
-        objects.get(2).getChildObject().get(11).scaleObject(5f, 5f, 5f);
+        objects.get(2).getChildObject().get(11).scaleObject(5f, 5f, 4f);
         objects.get(2).getChildObject().get(11).rotateObject((float) Math.toRadians(180f), 0.0f, 1.0f, 0.0f);
         objects.get(2).getChildObject().get(11).rotateObject((float) Math.toRadians(180f), 0.0f, 0.0f, 1.0f);
 
@@ -1837,13 +1837,13 @@ public class Main {
                 Arrays.asList(0.0f, 0.0f, 0.0f),
                 0.65f,
                 0.05f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).translateObject(1f, 0.95f, 0.0f);
-        objects.get(5).scaleObject(5f, 5f, 0f);
+        objects.get(5).scaleObject(5f, 5f, 5f);
 //BALOK BAWAH
         objects.get(5).getChildObject().add(new Sphere(
                 Arrays.asList(
@@ -1855,13 +1855,13 @@ public class Main {
                 Arrays.asList(0.0f, 0.0f, 0.0f),
                 0.65f,
                 0.05f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(0).translateObject(1.0f, 0.45f, 0.0f);
-        objects.get(5).getChildObject().get(0).scaleObject(5f, 5f, 0f);
+        objects.get(5).getChildObject().get(0).scaleObject(5f, 5f, 5f);
 //BALOK KANAN
         objects.get(5).getChildObject().add(new Sphere(
                 Arrays.asList(
@@ -1873,13 +1873,13 @@ public class Main {
                 Arrays.asList(0.0f, 0.0f, 0.0f),
                 0.05f,
                 1.10f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(1).translateObject(1.25f, 0.4f, 0.0f);
-        objects.get(5).getChildObject().get(1).scaleObject(5f, 5f, 0f);
+        objects.get(5).getChildObject().get(1).scaleObject(5f, 5f, 5f);
 
         //BALOK KIRI
         objects.get(5).getChildObject().add(new Sphere(
@@ -1892,13 +1892,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.05f,
                 1.10f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(2).translateObject(0.75f,0.4f,0.0f);
-        objects.get(5).getChildObject().get(2).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(2).scaleObject(5f,5f,5f);
 
         // balok kiri 2
         objects.get(5).getChildObject().add(new Sphere(
@@ -1911,13 +1911,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.05f,
                 0.55f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(3).translateObject(1.31f,0.7f,0.0f);
-        objects.get(5).getChildObject().get(3).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(3).scaleObject(5f,5f,5f);
 
         // backgorund kanan 2
         objects.get(5).getChildObject().add(new Sphere(
@@ -1930,13 +1930,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.05f,
                 0.55f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(4).translateObject(0.69f,0.7f,0.0f);
-        objects.get(5).getChildObject().get(4).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(4).scaleObject(5f,5f,5f);
 
         // backgorund atas ES
         objects.get(5).getChildObject().add(new Sphere(
@@ -1949,13 +1949,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.1f,
                 0.30f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(5).translateObject(0.95f,1.1f,0.0f);
-        objects.get(5).getChildObject().get(5).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(5).scaleObject(5f,5f,5f);
 
         // backgroun es mendatar
         // backgorund atas ES
@@ -1969,13 +1969,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.345f,
                 0.125f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(6).translateObject(0.97f,1.0f,0.0f);
-        objects.get(5).getChildObject().get(6).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(6).scaleObject(5f,5f,5f);
 //BATU
         objects.get(5).getChildObject().add(new Sphere(
                 Arrays.asList(
@@ -1987,13 +1987,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.25f,
                 0.55f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(7).translateObject(1.f,0.2f,0.0f);
-        objects.get(5).getChildObject().get(7).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(7).scaleObject(5f,5f,5f);
 //BAWAH BATU
         objects.get(5).getChildObject().add(new Sphere(
                 Arrays.asList(
@@ -2005,13 +2005,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.125f,
                 0.125f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(8).translateObject(0.77f,-0.135f,0.0f);
-        objects.get(5).getChildObject().get(8).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(8).scaleObject(5f,5f,5f);
 
 //         BAWAH BATU PANJANG
 
@@ -2025,13 +2025,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.455f,
                 0.125f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(9).translateObject(1.08f,-0.135f,0.0f);
-        objects.get(5).getChildObject().get(9).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(9).scaleObject(5f,5f,5f);
 
 //        BAWAH BAWAH BATU KAYU
 //         BAWAH BATU PANJANG
@@ -2046,13 +2046,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.455f,
                 0.125f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(10).translateObject(0.934f,-0.265f,0.0f);
-        objects.get(5).getChildObject().get(10).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(10).scaleObject(5f,5f,5f);
 
         //BAWAH BWAH BATU KANAN
         objects.get(5).getChildObject().add(new Sphere(
@@ -2065,13 +2065,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.135f,
                 0.125f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(11).translateObject(1.24f,-0.265f,0.0f);
-        objects.get(5).getChildObject().get(11).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(11).scaleObject(5f,5f,5f);
 
         // BATU PALING BAWAH
         //BAWAH BWAH BATU KANAN
@@ -2085,13 +2085,13 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.335f,
                 0.125f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(12).translateObject(1.145f,-0.4f,0.0f);
-        objects.get(5).getChildObject().get(12).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(12).scaleObject(5f,5f,5f);
 
         //BATU PALING BAWAH KIRI
         objects.get(5).getChildObject().add(new Sphere(
@@ -2104,14 +2104,15 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.26f,
                 0.125f,
-                0.0f,
+                0.05f,
                 36,
                 500,
                 3
         ));
         objects.get(5).getChildObject().get(13).translateObject(0.841f,-0.4f,0.0f);
-        objects.get(5).getChildObject().get(13).scaleObject(5f,5f,0f);
+        objects.get(5).getChildObject().get(13).scaleObject(5f,5f,5f);
 
+        //ketapel
         objects.add(new Sphere(
                 Arrays.asList(
                         new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
@@ -2131,8 +2132,66 @@ public class Main {
         objects.get(6).translateObject(-3f, -0f, 1.2f);
         objects.get(6).scaleObject(2f, 2f, 2f);
         objects.get(6).rotateObject((float) Math.toRadians(90f),1f, 0f, 0f);
+        //batang ketapel kanan
+        objects.get(6).getChildObject().add(new Sphere(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1f, 1.0f, .0f, 0.5f),
+                Arrays.asList(0.0f, 0.0f, 0.0f),
+                0.125f,
+                0.125f,
+                2f,
+                300,
+                300,
+                7
+        ));
+        objects.get(6).getChildObject().get(0).scaleObject(2f, 2f, 1f);
+        objects.get(6).getChildObject().get(0).rotateObject((float) Math.toRadians(90f),1f, 0f, 0f);
+        objects.get(6).getChildObject().get(0).rotateObject((float)Math.toRadians(50f),0f,-0f,-1f);
+        objects.get(6).getChildObject().get(0).translateObject(-6f, 1.4f, 0f);
 
+        //batang ketapel kiri
+        objects.get(6).getChildObject().add(new Sphere(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(1f, 1.0f, .0f, 0.5f),
+                Arrays.asList(0.0f, 0.0f, 0.0f),
+                0.125f,
+                0.125f,
+                2f,
+                300,
+                300,
+                7
+        ));
+        objects.get(6).getChildObject().get(1).scaleObject(2f, 2f, 1f);
+        objects.get(6).getChildObject().get(1).rotateObject((float) Math.toRadians(90f),1f, 0f, 0f);
+        objects.get(6).getChildObject().get(1).rotateObject((float)Math.toRadians(-50f),0f,-0f,-1f);
+        objects.get(6).getChildObject().get(1).translateObject(-6f, 1.4f, 0f);
 
+        //tali ketapel
+        objects.get(6).getChildObject().add(new Sphere(
+                Arrays.asList(
+                        new ShaderProgram.ShaderModuleData("resources/shaders/scene.vert", GL_VERTEX_SHADER),
+                        new ShaderProgram.ShaderModuleData("resources/shaders/scene.frag", GL_FRAGMENT_SHADER)
+                ),
+                new ArrayList<>(),
+                new Vector4f(0.2f, 0.1f, .0f, 0.5f),
+                Arrays.asList(0.0f, 0.0f, 0.0f),
+                2f,
+                0.125f,
+                0.125f,
+                300,
+                300,
+                11
+        ));
+        objects.get(6).getChildObject().get(2).scaleObject(1.2f,8f,2.125f);
+        objects.get(6).getChildObject().get(2).translateObject(-6f,2.3f,0.2f);
     }
 
 

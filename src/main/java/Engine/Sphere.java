@@ -44,6 +44,8 @@ public class Sphere extends Circle{
             createEllipticParaboloid();
         } else if (option == 10) {
             createLimasNatan();
+        } else if (option == 11){
+            createTaliKetapel();
         }
         setupVAOVBO();
     }
@@ -153,6 +155,133 @@ public class Sphere extends Circle{
         vertices.add(tempVertices.get(5));
         vertices.add(tempVertices.get(1));
     }
+
+    public void createTaliKetapel(){
+        Vector3f temp = new Vector3f();
+        ArrayList<Vector3f> tempVertices = new ArrayList<>();
+        //TITIK 1
+//      kiri atas belakang
+        temp.x = centerPoint.get(0) - radiusX / 2.0f;
+        temp.y = centerPoint.get(1) + radiusY / 2.0f;
+        temp.z = centerPoint.get(2) - radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+        //TITIK 2
+//      kanan atas belakang
+        temp.x = centerPoint.get(0) + radiusX / 2.0f;
+        temp.y = centerPoint.get(1) + radiusY / 2.0f;
+        temp.z = centerPoint.get(2) - radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+        //TITIK 3
+//       kanan bawah belakang
+        temp.x = centerPoint.get(0) + radiusX / 2.0f;
+        temp.y = centerPoint.get(1) - radiusY / 2.0f;
+        temp.z = centerPoint.get(2) - radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+        //TITIK 4
+//      kiri bawah belakang
+        temp.x = centerPoint.get(0) - radiusX / 2.0f;
+        temp.y = centerPoint.get(1) - radiusY / 2.0f;
+        temp.z = centerPoint.get(2) - radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+//      kiri atas depan
+        temp.x = centerPoint.get(0) - radiusX / 2.0f;
+        temp.y = centerPoint.get(1) + radiusY / 2.0f;
+        temp.z = centerPoint.get(2) + radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+        //TITIK 6
+//      kanan atas depan
+        temp.x = centerPoint.get(0) + radiusX / 2.0f;
+        temp.y = centerPoint.get(1) + radiusY / 2.0f;
+        temp.z = centerPoint.get(2) + radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+        //TITIK 7
+//      kanan bawah depan
+        temp.x = centerPoint.get(0) + radiusX / 2.0f;
+        temp.y = centerPoint.get(1) - radiusY / 2.0f;
+        temp.z = centerPoint.get(2) + radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+        //TITIK 8
+//      kiri bawah depan
+        temp.x = centerPoint.get(0) - radiusX / 2.0f;
+        temp.y = centerPoint.get(1) - radiusY / 2.0f;
+        temp.z = centerPoint.get(2) + radiusZ / 2.0f;
+        tempVertices.add(temp);
+        temp = new Vector3f();
+
+        vertices.clear();
+        //kotak yg sisi belakang
+        float firstX = tempVertices.get(0).get(0);
+        float firstY = tempVertices.get(0).get(1);
+        float firstZ = tempVertices.get(0).get(2);
+        float secondX=(tempVertices.get(0).get(0) + tempVertices.get(1).get(0))/2f;
+        float secondY=tempVertices.get(0).get(1);
+        float secondZ= (tempVertices.get(0).get(2)+tempVertices.get(1).get(2))*20f;
+        float thirdX = tempVertices.get(1).get(0);
+        float thirdY = tempVertices.get(1).get(1);
+        float thirdZ = tempVertices.get(1).get(2);
+        double newX, newY, newZ;
+        for (double i = 0; i <= 1; i += 0.001) {
+            newX = (Math.pow((1 - i), 2) * firstX) + (2 * (1 - i) * i * secondX) + (Math.pow(i, 2) * thirdX);
+            newY = (Math.pow((1 - i), 2) * firstY) + (2 * (1 - i) * i * secondY) + (Math.pow(i, 2) * thirdY);
+            newZ = (Math.pow((1 - i), 2) * firstZ) + (2 * (1 - i) * i * secondZ) + (Math.pow(i, 2) * thirdZ);
+            vertices.add(new Vector3f((float) newX, (float) newY, (float)newZ));
+            vertices.add(new Vector3f((float) newX, tempVertices.get(2).get(1), (float)newZ));
+            vertices.add(new Vector3f((float) newX-0.1f, tempVertices.get(2).get(1), (float)newZ));
+            vertices.add(new Vector3f((float) newX-0.1f, (float) newY, (float)newZ));
+        }
+//        vertices.add(tempVertices.get(0));
+//        vertices.add(tempVertices.get(1));
+
+//        vertices.add(tempVertices.get(2));
+//        vertices.add(tempVertices.get(3));
+//        vertices.add(tempVertices.get(0));
+//        vertices.add(tempVertices.get(2));
+        //SISI KANAN
+//        vertices.add(tempVertices.get(6));
+//        vertices.add(tempVertices.get(5));
+//        vertices.add(tempVertices.get(2));
+//        vertices.add(tempVertices.get(1));
+//        vertices.add(tempVertices.get(5));
+//        vertices.add(tempVertices.get(2));
+//        //SISI BAWAH
+//        vertices.add(tempVertices.get(7));
+//        vertices.add(tempVertices.get(3));
+//        vertices.add(tempVertices.get(2));
+//        vertices.add(tempVertices.get(2));
+//        vertices.add(tempVertices.get(6));
+//        vertices.add(tempVertices.get(7));
+//
+//        //SISI DEPAN
+//        vertices.add(tempVertices.get(7));
+//        vertices.add(tempVertices.get(6));
+//        vertices.add(tempVertices.get(4));
+//        vertices.add(tempVertices.get(5));
+//        vertices.add(tempVertices.get(6));
+//        vertices.add(tempVertices.get(4));
+//        //SISI KIRI
+//        vertices.add(tempVertices.get(0));
+//        vertices.add(tempVertices.get(7));
+//        vertices.add(tempVertices.get(4));
+//        vertices.add(tempVertices.get(7));
+//        vertices.add(tempVertices.get(3));
+//        vertices.add(tempVertices.get(0));
+//
+//        //SISI ATAS
+//        vertices.add(tempVertices.get(0));
+//        vertices.add(tempVertices.get(1));
+//        vertices.add(tempVertices.get(4));
+//        vertices.add(tempVertices.get(4));
+//        vertices.add(tempVertices.get(5));
+//        vertices.add(tempVertices.get(1));
+    }
+
     public void createSphere(){
         float pi = (float)Math.PI;
 
@@ -681,7 +810,7 @@ public class Sphere extends Circle{
         //GL_TRIANGLES
         //GL_TRIANGLE_FAN
         //GL_POINT
-        if(option == 3){
+        if(option == 3 || option == 11){
             glDrawArrays(GL_TRIANGLES,
                     0,
                     vertices.size());
